@@ -1,0 +1,23 @@
+{
+  "name": "discord-backup-bot",
+  "version": "1.0.0",
+  "description": "Discord sunucu yedekleme botu",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["discord", "backup", "bot", "yedekleme"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+} 
