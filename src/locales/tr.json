@@ -1,0 +1,95 @@
+{
+  "general": {
+    "bot_name": "Discord Backup Bot",
+    "success": "Başarılı",
+    "error": "Hata",
+    "warning": "Uyarı",
+    "info": "Bilgi",
+    "loading": "Yükleniyor...",
+    "not_found": "Bulunamadı",
+    "unauthorized": "Yetkisiz",
+    "completed": "Tamamlandı"
+  },
+  "commands": {
+    "backup": {
+      "name": "yedek-al",
+      "description": "Sunucunun tam yedeğini alır",
+      "options": {
+        "password": "Yedek için şifre (isteğe bağlı)"
+      },
+      "responses": {
+        "started": "Yedekleme işlemi başlatıldı...",
+        "completed": "Yedekleme tamamlandı! Yedek ID: {id}",
+        "error": "Yedekleme sırasında bir hata oluştu: {error}"
+      }
+    },
+    "load": {
+      "name": "yedek-yükle",
+      "description": "Belirtilen yedeği sunucuya yükler",
+      "options": {
+        "id": "Yedek ID",
+        "password": "Yedek şifresi (gerekirse)",
+        "mode": "Yükleme modu (tam, roller, kanallar, sade)"
+      },
+      "responses": {
+        "started": "{mode} modunda yedek yükleme işlemi başlatıldı...",
+        "completed": "Yedek yükleme işlemi tamamlandı!",
+        "error": "Yedek yükleme sırasında bir hata oluştu: {error}",
+        "not_found": "Belirtilen ID'ye sahip yedek bulunamadı",
+        "wrong_password": "Yanlış şifre girdiniz"
+      }
+    },
+    "history": {
+      "name": "yedek-geçmişi",
+      "description": "Tüm yedeklerin geçmişini gösterir",
+      "responses": {
+        "no_backups": "Henüz yedek alınmamış",
+        "history_title": "Yedek Geçmişi",
+        "backup_info": "ID: {id} | Tarih: {date} | Kullanıcı: {user}"
+      }
+    },
+    "share": {
+      "name": "yedek-aktar",
+      "description": "Bir yedeği başka bir kullanıcıya aktarır",
+      "options": {
+        "id": "Yedek ID",
+        "user": "Aktarılacak kullanıcı"
+      },
+      "responses": {
+        "sent": "Yedek {user} kullanıcısına başarıyla gönderildi",
+        "error": "Yedek gönderilirken bir hata oluştu: {error}",
+        "not_found": "Belirtilen ID'ye sahip yedek bulunamadı"
+      }
+    },
+    "permission": {
+      "name": "yetki-ayarla",
+      "description": "Komut yetki ayarlarını yapılandırır",
+      "options": {
+        "command": "Komut adı",
+        "role": "Yetkili rol"
+      },
+      "responses": {
+        "set": "{command} komutu için {role} rolü yetkilendirildi",
+        "error": "Yetki ayarlanırken bir hata oluştu: {error}"
+      }
+    },
+    "settings": {
+      "name": "ayarlar",
+      "description": "Bot ayarlarını yapılandırır",
+      "options": {
+        "language": "Bot dili (tr, en)"
+      },
+      "responses": {
+        "language_changed": "Bot dili {language} olarak değiştirildi",
+        "error": "Ayarlar değiştirilirken bir hata oluştu: {error}"
+      }
+    }
+  },
+  "logs": {
+    "backup_created": "Yedek oluşturuldu: {id} | Kullanıcı: {user}",
+    "backup_loaded": "Yedek yüklendi: {id} | Kullanıcı: {user} | Mod: {mode}",
+    "missing_users": "Yedekte olan ancak sunucuda olmayan kullanıcılar: {users}",
+    "roles_restored": "Kullanıcı rolleri geri yüklendi: {user}",
+    "permission_set": "Komut yetkisi ayarlandı: {command} -> {role}"
+  }
+}

@@ -23,7 +23,7 @@ export async function loadButtons(client) {
   const buttonFiles = fs.readdirSync(buttonsPath).filter(file => file.endsWith('.js'));
   
   for (const file of buttonFiles) {
-    const filePath = path.join(buttonsPath, file);
+    const filePath = `file://${path.join(buttonsPath, file).replace(/\\/g, '/')}`;
     const button = await import(filePath);
     
     // Extract button name from filename

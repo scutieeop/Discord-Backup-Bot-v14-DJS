@@ -1,0 +1,95 @@
+{
+  "general": {
+    "bot_name": "Discord Backup Bot",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "loading": "Loading...",
+    "not_found": "Not Found",
+    "unauthorized": "Unauthorized",
+    "completed": "Completed"
+  },
+  "commands": {
+    "backup": {
+      "name": "backup",
+      "description": "Creates a full backup of the server",
+      "options": {
+        "password": "Password for the backup (optional)"
+      },
+      "responses": {
+        "started": "Backup process started...",
+        "completed": "Backup completed! Backup ID: {id}",
+        "error": "An error occurred during backup: {error}"
+      }
+    },
+    "load": {
+      "name": "load-backup",
+      "description": "Loads the specified backup to the server",
+      "options": {
+        "id": "Backup ID",
+        "password": "Backup password (if required)",
+        "mode": "Loading mode (full, roles, channels, basic)"
+      },
+      "responses": {
+        "started": "Backup loading started in {mode} mode...",
+        "completed": "Backup loading process completed!",
+        "error": "An error occurred while loading the backup: {error}",
+        "not_found": "Backup with the specified ID not found",
+        "wrong_password": "You entered the wrong password"
+      }
+    },
+    "history": {
+      "name": "backup-history",
+      "description": "Shows the history of all backups",
+      "responses": {
+        "no_backups": "No backups taken yet",
+        "history_title": "Backup History",
+        "backup_info": "ID: {id} | Date: {date} | User: {user}"
+      }
+    },
+    "share": {
+      "name": "share-backup",
+      "description": "Shares a backup with another user",
+      "options": {
+        "id": "Backup ID",
+        "user": "User to share with"
+      },
+      "responses": {
+        "sent": "Backup successfully sent to {user}",
+        "error": "An error occurred while sending the backup: {error}",
+        "not_found": "Backup with the specified ID not found"
+      }
+    },
+    "permission": {
+      "name": "set-permission",
+      "description": "Configures command permission settings",
+      "options": {
+        "command": "Command name",
+        "role": "Authorized role"
+      },
+      "responses": {
+        "set": "Role {role} authorized for command {command}",
+        "error": "An error occurred while setting permissions: {error}"
+      }
+    },
+    "settings": {
+      "name": "settings",
+      "description": "Configures bot settings",
+      "options": {
+        "language": "Bot language (tr, en)"
+      },
+      "responses": {
+        "language_changed": "Bot language changed to {language}",
+        "error": "An error occurred while changing settings: {error}"
+      }
+    }
+  },
+  "logs": {
+    "backup_created": "Backup created: {id} | User: {user}",
+    "backup_loaded": "Backup loaded: {id} | User: {user} | Mode: {mode}",
+    "missing_users": "Users in backup but not in server: {users}",
+    "roles_restored": "User roles restored: {user}",
+    "permission_set": "Command permission set: {command} -> {role}"
+  }
+}
